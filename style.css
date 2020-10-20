@@ -1,0 +1,115 @@
+ body {
+        --primary: 25,91,255;
+        --color: 44, 62, 80;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #f4f7f8;
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+        color: rgb(var(--color));
+    }
+    * {
+        list-style: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .con-input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        box-shadow: 0px 15px 30px 0px rgba(0,0,0,.04);
+        position: relative;
+        overflow: hidden;
+        transition: all .25s ease;
+        background: #fff;
+    }
+    .con-input.click {
+        transform: scale(.9);
+    }
+    .effect {
+        opacity: 1;
+        position: absolute;
+        z-index: 2;
+        width: 500px;
+        height: 500px;
+        background: rgba(101, 85, 223,1);
+        border-radius: 50%;
+        right: 0px;
+        transform: translate(100%,0%);
+        pointer-events: none;
+    }
+    .effect:after {
+        content: '';
+        background: rgba(255,255,255,.4);
+        opacity: .5;
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .effect:before {
+        content: '';
+        background: rgba(255,255,255,.4);
+        opacity: .5;
+        width: 35%;
+        height: 100%;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .effect.active {
+        opacity: 1;
+        width: 500px;
+        height: 500px;
+        transform: translate(0%);
+    }
+    .effect.remove {
+        transform: translate(-60%);
+    }
+    .con-input input {
+        padding: 12px 20px;
+        border: 0px;
+        border-radius: 18px 0px 0px 18px;
+        background: #fff;
+        color: #6555df;
+        font-weight: 600;
+        caret-color: #6555df;
+    }
+    .con-input__input {
+        transition: all .25s ease;
+    }
+    .con-input__input.hideEffect {
+        opacity: 0;
+        transform: translate(-15px);
+    }
+    .con-input button {
+        width: 44px;
+        height: 44px;
+        border: 0px;
+        border-radius: 0px 18px 18px 0px;
+        cursor: pointer;
+        background: #fff;
+    }
+    .con-input .show {
+        display: none;
+    }
+    .con-input button i {
+        font-size: 1.15rem;
+        display: block;
+        color: #6555df;
+    }
+    .con-input__text {
+        display: none;
+    }
+    label {
+        font-size: .8rem;
+        font-weight: 600;
+        color: #6555df;
+        padding-left: 10px;
+        display: block;
+    }

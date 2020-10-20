@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Author Meta -->
+ <meta name="author" content="faruk">
+ <!-- Meta Description -->
+ <meta name="description" content="Show/hidden_input_password">
+ <!-- Meta Keyword -->
+ <meta name="keywords" content="Show/hidden_input_password">
+ <!-- meta character set -->
+ <meta charset="UTF-8">
+ <title>Faruk Özel</title>
+ <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="content">
+        <label for="password">
+            Password
+        </label>
+        <div class="con-input">
+            <div class="con-input__text con-input__input">
+                <input 
+                    spellcheck="false" 
+                    oninput="handleInputText(event)" 
+                    class="text" 
+                    type="text">
+            </div>
+            <div class="con-input__password con-input__input">
+                <input 
+                    id="password" 
+                    autocomplete="off" 
+                    oninput="handleInputPassword(event)" 
+                    class="password" 
+                    type="password">
+            </div>
+            <button onClick="handleClickHidden(event)">
+                <i class='hide fa fa-leaf'></i>
+                <i class='show fa fa-heart' ></i>
+            </button>
+            <div class="effect"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
